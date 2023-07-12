@@ -13,6 +13,7 @@
 		506ADEAD2A267D4F00740BE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506ADEAB2A267D4F00740BE8 /* Main.storyboard */; };
 		506ADEAF2A267D5000740BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506ADEAE2A267D5000740BE8 /* Assets.xcassets */; };
 		506ADEB22A267D5000740BE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506ADEB02A267D5000740BE8 /* LaunchScreen.storyboard */; };
+		5074C6FC2A28D714001CAF2D /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074C6FB2A28D714001CAF2D /* CoinModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		506ADEAE2A267D5000740BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		506ADEB12A267D5000740BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		506ADEB32A267D5000740BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5074C6FB2A28D714001CAF2D /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		506ADE992A267D4F00740BE8 = {
 			isa = PBXGroup;
 			children = (
+				5074C6F82A28CB4B001CAF2D /* Domain */,
 				506ADEA42A267D4F00740BE8 /* CryptoCharts */,
 				506ADEA32A267D4F00740BE8 /* Products */,
 			);
@@ -65,6 +68,30 @@
 				506ADEB32A267D5000740BE8 /* Info.plist */,
 			);
 			path = CryptoCharts;
+			sourceTree = "<group>";
+		};
+		5074C6F82A28CB4B001CAF2D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5074C6FA2A28CB71001CAF2D /* Model */,
+				5074C6F92A28CB52001CAF2D /* DataProvider */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5074C6F92A28CB52001CAF2D /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		5074C6FA2A28CB71001CAF2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5074C6FB2A28D714001CAF2D /* CoinModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5074C6FC2A28D714001CAF2D /* CoinModel.swift in Sources */,
 				506ADEAA2A267D4F00740BE8 /* ViewController.swift in Sources */,
 				506ADEA62A267D4F00740BE8 /* AppDelegate.swift in Sources */,
 				506ADEA82A267D4F00740BE8 /* SceneDelegate.swift in Sources */,
@@ -290,11 +318,13 @@
 				DEVELOPMENT_TEAM = VH7L3699C6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CryptoCharts/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +332,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.future.CryptoCharts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,11 +351,13 @@
 				DEVELOPMENT_TEAM = VH7L3699C6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CryptoCharts/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +365,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.future.CryptoCharts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
